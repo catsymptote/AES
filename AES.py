@@ -177,7 +177,7 @@ def hexToBin(hexa):
 
 # 14: 1110 -> e
 def singleBinToHex(binaryList):
-    print(binaryList)
+    #print(binaryList)
     binStr = "".join(binaryList)
     #print(binStr)
     #print()
@@ -227,7 +227,7 @@ def binToHex(binaryList):
             tmpBin[j] = binaryList[counter]
             counter += 1
         hexa[i] = singleBinToHex(tmpBin)
-    print(hexa)
+    #print(hexa)
     return "".join(hexa)
 
 
@@ -288,14 +288,14 @@ def constructSBox():
 def SBox(pos):
     SBoxMatrix = constructSBox()
 
-    posx = SBoxIndex(pos[0])
-    posy = SBoxIndex(pos[1])
+    posy = SBoxIndex(pos[0])
+    posx = SBoxIndex(pos[1])
     #print(posx)
     #print(posy)
 
     return SBoxMatrix[posy][posx]
 
-#print(SBox("e4"))
+print(SBox("cf"))
 
 
 
@@ -317,9 +317,10 @@ def yellowCol(i):
 
 def MixColumn(Matrix):
     Columns = Matrix
+    #Columns.append()
 
     for i in range(len(Columns) * 5 - 3):
-        newCol = Columns[i + 3]
+        newCol = Columns[i + 3][:]
         newCol = LSO(newCol)
         #print(newCol)
         newCol = SBoxList(newCol)
@@ -334,7 +335,7 @@ def MixColumn(Matrix):
         first = [None] * 4
         second = [None] * 4
         for p in range(4):
-            print("XOR: " + str(newCol[p] + " | " + str(oldCol[p])))
+            #print("XOR: " + str(newCol[p] + " | " + str(oldCol[p])))
             first[p] = hexXOR(newCol[p], oldCol[p])
             #print("= " + str(first[p]))
         #print(first)
@@ -342,7 +343,7 @@ def MixColumn(Matrix):
             second[p] = hexXOR(first[p], altCol[p])
 
         Columns.append(second)
-    #printCols(Columns)
+    printCols(Columns)
 
 
 
@@ -372,17 +373,15 @@ A = [
 #print()
 #printRows(A)
 
-#MixColumn(A)
+MixColumn(A)
 
 
 
 
+#a = "2b"
+#b = "8a"
+#c = "01"
+#d = hexXOR(a, b)
+#e = hexXOR(d, c)
 
-
-a = "2b"
-b = "8a"
-c = "01"
-d = hexXOR(a, b)
-e = hexXOR(d, c)
-
-print(e)
+#print(e)
