@@ -9,12 +9,12 @@ Required functions:                 Status:
 - LSO/RSO for elements and rows.    Done
 - USO/DSO (Up/Down)                 Done (not tested)   (replace with column flip (row -> column) of matrix)
 - Column -> Row matrix fliå         Done
-- MixColumns                        Not yet
+- MixColumns                        Done
 - ARK? (LSO + XOR?) + key rounds    Not yet
 
 Conversion functions:               Status:
-- Hex --> Binary                    Not yet
-- Binary --> Hex                    Not yet
+- Hex --> Binary                    Done
+- Binary --> Hex                    Done
 - Unicode? --> Hex/Binary           Not yet
 
 

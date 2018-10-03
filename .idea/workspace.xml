@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ffb66b82-3faf-48e6-9f36-005d06d4aa6e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/AES.py" afterPath="$PROJECT_DIR$/AES.py" />
-      <change beforePath="$PROJECT_DIR$/SBox.ods" afterPath="$PROJECT_DIR$/SBox.ods" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="AES.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AES.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="351" column="0" lean-forward="true" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -166,8 +165,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/AES.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="351" column="0" lean-forward="true" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
           <folding />
         </state>
       </provider>
