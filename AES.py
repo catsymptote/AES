@@ -8,7 +8,7 @@ Required functions:                 Status:
 - SubBytes with S-Box               Done
 - LSO/RSO for elements and rows.    Done
 - USO/DSO (Up/Down)                 Done (not tested)   (replace with column flip (row -> column) of matrix)
-- Column -> Row matrix fliå         Done
+- Column -> Row matrix flip         Done
 - MixColumns                        Done
 - ARK? (LSO + XOR?) + key rounds    Not yet
 
@@ -295,7 +295,7 @@ def SBox(pos):
 
     return SBoxMatrix[posy][posx]
 
-print(SBox("cf"))
+#print(SBox("cf"))
 
 
 
@@ -306,11 +306,12 @@ def SBoxList(hexList):
 
 
 
-def yellowCol(i):
+def roundConstant(i):
     altVar = hex(((2 ** i) % 229))[2:]  # Not quite sure why 229 here.
     if (len(altVar) < 2):
         altVar = "0" + altVar
     altCol = [altVar, "00", "00", "00"]
+
     #print(altCol)
     return altCol
 
@@ -326,7 +327,8 @@ def MixColumn(Matrix):
             newCol = LSO(newCol)
             newCol = SBoxList(newCol)
         oldCol = Columns[i]
-        altCol = yellowCol(i)
+        if(i%4==0):
+            altCol = roundConstant(int(i/4))
 
         #print(newCol)
         #print(oldCol)
