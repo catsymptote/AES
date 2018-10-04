@@ -35,6 +35,10 @@ Steps in AES:
 
 """
 
+
+# My sincerest apologies for the ugliness of my code. Please. Don't judge me.
+
+
 import csv
 
 
@@ -391,5 +395,3 @@ MixColumn(A)
 #e = hexXOR(d, c)
 
 #print(e)
-
-# fak git and github
