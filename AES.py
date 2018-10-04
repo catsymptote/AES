@@ -295,7 +295,7 @@ def SBox(pos):
 
     return SBoxMatrix[posy][posx]
 
-print(SBox("cf"))
+#print(SBox("cf"))
 
 
 
