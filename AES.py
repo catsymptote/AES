@@ -321,9 +321,10 @@ def MixColumn(Matrix):
 
     for i in range(len(Columns) * 5 - 3):
         newCol = Columns[i + 3][:]
-        newCol = LSO(newCol)
         #print(newCol)
-        newCol = SBoxList(newCol)
+        if(i%4 == 0):
+            newCol = LSO(newCol)
+            newCol = SBoxList(newCol)
         oldCol = Columns[i]
         altCol = yellowCol(i)
 
@@ -339,10 +340,13 @@ def MixColumn(Matrix):
             first[p] = hexXOR(newCol[p], oldCol[p])
             #print("= " + str(first[p]))
         #print(first)
-        for p in range(4):
-            second[p] = hexXOR(first[p], altCol[p])
+        if(i%4 == 0):
+            for p in range(4):
+                second[p] = hexXOR(first[p], altCol[p])
 
-        Columns.append(second)
+            Columns.append(second)
+        else:
+            Columns.append(first)
     printCols(Columns)
 
 
@@ -385,3 +389,5 @@ MixColumn(A)
 #e = hexXOR(d, c)
 
 #print(e)
+
+# fak git and github
