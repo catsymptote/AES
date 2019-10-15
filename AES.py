@@ -1,5 +1,4 @@
 """
-
 AES encryption and decryption lib.
 Made by Paul Knutson
 
@@ -32,7 +31,6 @@ Steps in AES:
     - hexToBin
     - XOR x2
     - binToHex
-
 """
 
 
